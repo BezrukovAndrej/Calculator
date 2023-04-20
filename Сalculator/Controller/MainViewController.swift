@@ -56,6 +56,7 @@ extension MainViewController: MainStackViewProtocol {
     func tapActionButton(tag: Int) {
         switch tag {
         case 10:
+            historyLabel.text = calculationModel.getCalculationHistory(tag: tag)
             calculationModel.addPointValue()
             resultLabel.text = calculationModel.getCurrentNumber()
         case 11:
@@ -75,6 +76,7 @@ extension MainViewController: MainStackViewProtocol {
         case 16:
             calculationModel.setPrecentNumber()
             resultLabel.text = calculationModel.getCurrentNumber()
+            historyLabel.text = calculationModel.getCalculationHistory(tag: tag)
         case 17:
             historyLabel.text = calculationModel.getCalculationHistory(tag: tag)
             calculationModel.invertValue()

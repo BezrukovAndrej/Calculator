@@ -28,12 +28,26 @@ final class CalculationModel {
         switch tag {
         case 0...9:
             currentHistory += "\(tag)"
+        case 10:
+            if !currentNumber.contains(".") {
+                currentHistory += ","
+            }
         case 12...15:
+            guard let last = currentHistory.last else { break }
+            if last == "+" ||
+                last == "-" ||
+                last == "*" ||
+                last == "/" ||
+                last == "+" {
+                currentHistory.removeLast()
+            }
             currentHistory += currentOperation.rawValue
+        case 16:
+            currentHistory += "%"
         case 17:
             setInvertHistoryValue()
         default:
-            print("Error histoty tag")
+            break
         }
         return currentHistory
     }
@@ -55,10 +69,13 @@ final class CalculationModel {
     
     public func setOperation(opertion: Operations) -> String {
         if currentOperation == .noAction {
-            guard let number = Double(currentNumber) else { return "" }
+            guard let number = Double(currentNumber) else { return "0" }
             firstNumber = number
         } else {
-            guard let result = Double(getResult()) else { return "" }
+            guard let result = Double(getResult()) else {
+                currentOperation = opertion
+                return firstNumber.stringWithoutZeroFraction
+            }
             firstNumber = result
         }
         currentNumber = ""
@@ -116,8 +133,9 @@ final class CalculationModel {
     }
     
     public func addPointValue() {
-        currentNumber += currentNumber != "" ? "." : "0."
-        currentHistory += currentHistory != "" ? "." : "0."
+        if !currentNumber.contains(".") {
+            currentNumber += currentNumber != "" ? "." : "0."
+        }
     }
     
     public func setPrecentNumber() {
