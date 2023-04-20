@@ -14,6 +14,11 @@
 		912CB62829EFC689009977E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912CB62629EFC689009977E0 /* LaunchScreen.storyboard */; };
 		912CB63629EFCB39009977E0 /* MainStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB63529EFCB39009977E0 /* MainStackView.swift */; };
 		912CB63A29EFEE1F009977E0 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB63929EFEE1F009977E0 /* UIStackView + Extension.swift */; };
+		912CB63C29F13F62009977E0 /* OperationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB63B29F13F62009977E0 /* OperationsModel.swift */; };
+		912CB63E29F140CF009977E0 /* CalculationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB63D29F140CF009977E0 /* CalculationModel.swift */; };
+		912CB64129F143B4009977E0 /* MainStackViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB64029F143B4009977E0 /* MainStackViewProtocol.swift */; };
+		912CB64329F15DCC009977E0 /* Double + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB64229F15DCC009977E0 /* Double + Extension.swift */; };
+		912CB64529F1612F009977E0 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CB64429F1612F009977E0 /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		912CB62929EFC689009977E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912CB63529EFCB39009977E0 /* MainStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStackView.swift; sourceTree = "<group>"; };
 		912CB63929EFEE1F009977E0 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		912CB63B29F13F62009977E0 /* OperationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsModel.swift; sourceTree = "<group>"; };
+		912CB63D29F140CF009977E0 /* CalculationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationModel.swift; sourceTree = "<group>"; };
+		912CB64029F143B4009977E0 /* MainStackViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStackViewProtocol.swift; sourceTree = "<group>"; };
+		912CB64229F15DCC009977E0 /* Double + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extension.swift"; sourceTree = "<group>"; };
+		912CB64429F1612F009977E0 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,8 @@
 		912CB63229EFCA69009977E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				912CB63B29F13F62009977E0 /* OperationsModel.swift */,
+				912CB63D29F140CF009977E0 /* CalculationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				912CB63529EFCB39009977E0 /* MainStackView.swift */,
+				912CB64029F143B4009977E0 /* MainStackViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +126,9 @@
 		912CB63729EFEDFE009977E0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				912CB64229F15DCC009977E0 /* Double + Extension.swift */,
 				912CB63829EFEE0B009977E0 /* UIkit */,
+				912CB64429F1612F009977E0 /* String + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -198,8 +213,13 @@
 			files = (
 				912CB63629EFCB39009977E0 /* MainStackView.swift in Sources */,
 				912CB62029EFC684009977E0 /* MainViewController.swift in Sources */,
+				912CB64529F1612F009977E0 /* String + Extension.swift in Sources */,
+				912CB63E29F140CF009977E0 /* CalculationModel.swift in Sources */,
 				912CB61C29EFC684009977E0 /* AppDelegate.swift in Sources */,
+				912CB64329F15DCC009977E0 /* Double + Extension.swift in Sources */,
+				912CB63C29F13F62009977E0 /* OperationsModel.swift in Sources */,
 				912CB63A29EFEE1F009977E0 /* UIStackView + Extension.swift in Sources */,
+				912CB64129F143B4009977E0 /* MainStackViewProtocol.swift in Sources */,
 				912CB61E29EFC684009977E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,6 +4,8 @@ final class MainStackView: UIStackView {
     
     private var stackViewsArray = [UIStackView]()
     
+    weak var delegate: MainStackViewProtocol?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,13 +33,12 @@ final class MainStackView: UIStackView {
         button.backgroundColor = color
         button.tintColor = .white
         button.titleLabel?.font = .boldSystemFont(ofSize: 22)
-        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(keyboardButtonTapped), for: .touchUpInside)
         return button
     }
     
     @objc func keyboardButtonTapped(sender: UIButton) {
-        
+        sender.tag < 10 ? delegate?.tapNumberButton(tag: sender.tag) : delegate?.tapActionButton(tag: sender.tag)
     }
     
     private func setupMainStackView() {
